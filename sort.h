@@ -28,5 +28,6 @@ void quick_sort_recursive(int *array, int low, int high);
 int lomuto_partition(int *array, int low, int high);
 void swap(int *a, int *b);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
 
 #endif
