@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "sort.h"
 
 /**
  * swap - Swaps two integers
@@ -36,15 +37,14 @@ int lomuto_partition(int *array, int low, int high)
 			if (i != j)
 			{
 				swap(&array[i], &array[j]);
+				print_array(array, high + 1);
 			}
 		}
 	}
 	if (i + 1 != high)
 	{
 		swap(&array[i + 1], &array[high]);
-		printf("Current array: ");
-		for (k = low; k <= high; k++)
-			printf("%d%s", array[k], k < high ? ", " : "\n");
+		print_array(array, high + 1);
 	}
 	return (i + 1);
 }
